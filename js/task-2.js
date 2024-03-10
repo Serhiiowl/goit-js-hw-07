@@ -28,9 +28,16 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector('.gallery'); 
-const listItems = images.map(image => {
-  return `<li><img src="${image.url}" alt="${image.alt}"></li>`;
-}).join('');
 
-gallery.insertAdjacentHTML('beforeend', listItems);
+const gallery = document.querySelector('.gallery');
+const markup = images.map(image => `<li style="flex: 0 1 calc(33.333% - 16px);">
+ <img src="${image.url}" alt="${image.alt}" style="width: 100%; height: 100%;
+  object-fit: cover;"></li>`).join('');
+
+gallery.insertAdjacentHTML('beforeend', markup);
+
+gallery.style.display = 'flex';
+gallery.style.flexWrap = 'wrap';
+gallery.style.gap = '48px 24px';
+
+ 

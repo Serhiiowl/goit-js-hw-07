@@ -7,3 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     output.textContent = trimmedInput ? trimmedInput : 'Anonymous';
   });
 });
+document.addEventListener('DOMContentLoaded', (event) => {
+  const nameInput = document.getElementById('name-input');
+  nameInput.style.width = '360px';
+  nameInput.style.height = '40px';
+  nameInput.style.borderRadius = '8px';
+  nameInput.style.paddingLeft = '16px';
+  nameInput.style.fontSize = '16px';
+});
